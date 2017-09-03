@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
+using System.DrawingCore;
+using System.DrawingCore.Imaging;
 using System.IO;
 using System.Threading;
 using NMaier.SimpleDlna.Server;

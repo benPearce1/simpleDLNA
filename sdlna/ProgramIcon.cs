@@ -18,7 +18,7 @@ namespace NMaier.SimpleDlna
         if (window == IntPtr.Zero) {
           throw new Exception("Cannot get console window");
         }
-        var inst = Marshal.GetHINSTANCE(
+        /* var inst = Marshal.GetHINSTANCE(
           Assembly.GetEntryAssembly().GetModules()[0]);
         var iconLg = SafeNativeMethods.LoadImage(inst, "#32512", 1, 0, 0, 0x40);
         if (iconLg == IntPtr.Zero) {
@@ -33,7 +33,7 @@ namespace NMaier.SimpleDlna
         oldLg = SafeNativeMethods.SendMessage(
           window, SafeNativeMethods.WM_SETICON, new IntPtr(1), iconLg);
         oldSm = SafeNativeMethods.SendMessage(
-          window, SafeNativeMethods.WM_SETICON, IntPtr.Zero, iconSm);
+          window, SafeNativeMethods.WM_SETICON, IntPtr.Zero, iconSm); */
       }
       catch (Exception ex) {
         Debug("Couldnd't set icon", ex);

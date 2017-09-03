@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data;
-using System.Data.SQLite;
 using System.IO;
 using System.Reflection;
+using Microsoft.Data.Sqlite;
 using log4net;
 
 namespace NMaier.SimpleDlna.Utilities
@@ -47,14 +47,14 @@ namespace NMaier.SimpleDlna.Utilities
 
     private static IDbConnection GetDatabaseConnectionSDS(string cs)
     {
-      var rv = new SQLiteConnection(cs);
+      var rv = new Microsoft.Data.Sqlite.SqliteConnection(cs);
       if (rv == null) {
         throw new ArgumentException("no connection");
       }
       rv.Open();
 
       try {
-        rv.SetChunkSize(GROW_SIZE);
+        /*  rv.SetChunkSize(GROW_SIZE); */
       }
       catch (Exception ex) {
         LogManager.GetLogger(typeof (Sqlite)).Error(
@@ -64,8 +64,8 @@ namespace NMaier.SimpleDlna.Utilities
       if (clearPool == null) {
         clearPool = conn =>
         {
-          SQLiteConnection.ClearPool(
-            conn as SQLiteConnection);
+          /* SQLiteConnection.ClearPool(
+            conn as SqliteConnection); */
         };
       }
       return rv;

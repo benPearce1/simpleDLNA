@@ -129,7 +129,7 @@ namespace NMaier.SimpleDlna
 
     public void SetupLogging()
     {
-      var appender = new ConsoleAppender();
+      /* var appender = new ConsoleAppender();
       var layout = new PatternLayout
       {
         ConversionPattern = "%6level [%3thread] %-20.20logger{1} - %message%newline%exception"
@@ -160,7 +160,7 @@ namespace NMaier.SimpleDlna
       if (level == null) {
         throw new GetOptException("Invalid log level");
       }
-      repo.Threshold = level;
+      repo.Threshold = level; */
     }
   }
 }
