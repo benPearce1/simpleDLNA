@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Title>File Server class library</Title>
@@ -12,6 +12,7 @@
     <ProjectReference Include="..\thumbs\thumbs.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="taglib" Version="2.1.0.0" />
+    <!--<PackageReference Include="taglib" Version="2.1.0.0" />-->
+    <PackageReference Include="taglib-sharp" Version="1.0.0" />
   </ItemGroup>
 </Project>
